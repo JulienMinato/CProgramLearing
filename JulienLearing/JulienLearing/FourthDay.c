@@ -32,7 +32,8 @@ int main(int argc, const char * argv[]) {
     
 
 //    palindromeNum();
-    PascalTriangle();
+//    PascalTriangle();
+    test5();
     
 
     
@@ -415,8 +416,8 @@ void test5(){    // 给出以下形式数据，计算各行元素的最小值，
     int a[100][100]={0};
     int n=3;      //行
     int m=3;      //列
-    int i,j,min;
-    
+    int i,j,min,q=0;
+    int b[100]={0};
     
     
     
@@ -434,7 +435,18 @@ void test5(){    // 给出以下形式数据，计算各行元素的最小值，
         }
         printf("\n");
     }
+    
 
+    for (i=0; i<n; i++) {
+        min=a[i][0];
+        for (j=0; j<m; j++) {
+            if(min>a[i][j])
+                min=a[i][j];
+        }
+        b[q]=min;
+        q++;
+        printf("最小值%d\n",min);
+    }
 
   
 
