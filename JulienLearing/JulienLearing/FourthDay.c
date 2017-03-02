@@ -16,9 +16,11 @@ void scanfArray(int*a,int n);
 void palindromeNum(); //判定用户输入的正整数是否为“回文数”，所谓“回文数”是指正读反读都相同的数。
 void insertArray();    //  已有一个已排好序的数组，今输入一个数，要求按原来排序的规律将它插入数组中。
 void test1();   //定义一个4×3的二维数组a，数组元素的值由键盘输入，输出其中的最大值及所在的行下标。
-
-
-
+void test2(); //从键盘上输入一个5行5列的矩阵的各个元素的值，然后分别输出主对角线元素的最大值和辅对角线元素的最小值。
+void test4();  //定义一个4行5列的矩阵，从键盘上给各个元素赋值，求四周元素的和。
+void PascalTriangle(); //编写程序打印出以下的杨辉三角形(要求打印出10行),使它能得出正确的结果。
+void PascalTriangleII();  //编写程序打印出以下的杨辉三角形(要求打印出10行),使它能得出正确的结果。
+void test5(); // 给出以下形式数据，计算各行元素的最小值，并存入一个一维数组中。
 
 
 
@@ -30,9 +32,9 @@ int main(int argc, const char * argv[]) {
     
 
 //    palindromeNum();
+    PascalTriangle();
     
 
-    test1();
     
 
 }
@@ -188,7 +190,7 @@ void test1(){    //定义一个4×3的二维数组a，数组元素的值由键�
     
     for (i=0; i<n; i++) {
         for (j=0; j<m; j++) {
-            if (a[i][j]>a[i][j+1]) {
+            if (max<a[i][j]) {
                 max=a[i][j];
             }
             p=n;
@@ -196,7 +198,258 @@ void test1(){    //定义一个4×3的二维数组a，数组元素的值由键�
         }
     
     
-    }
+  }
     printf("二维数组中最大值的是：a[%d][%d]=%d\n",p,q,max);
     
 }
+
+
+void test2(){  //从键盘上输入一个5行5列的矩阵的各个元素的值，然后分别输出主对角线元素的最大值和辅对角线元素的最小值。
+    
+    
+    int a[100][100]={0};
+    int n=5;      //行
+    int m=5;      //列
+    int i,j,max,min;
+    int p,q;      //所在的坐标  PXQ
+    
+    
+    
+    printf("给二维数组 %d X %d 赋值，请输入：\n",n,m);
+    for (i=0; i<n; i++) {
+        for (j=0; j<m; j++) {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    
+    printf("你输入的二维数组 %d X %d 为：\n",n,m);
+    for (i=0; i<n; i++) {
+        for (j=0; j<m; j++) {
+            printf("%d\t",a[i][j]);
+        }
+        printf("\n");
+    }
+
+
+
+
+}
+
+
+
+void test3(){   //定义一个5行4列的矩阵，从键盘上给各个元素的值，要求四周元素值为1，其它元素值为0。
+
+    
+    int a[100][100]={0};
+    int n=5;      //行
+    int m=5;      //列
+    int i,j,max,min;
+    int p,q;      //所在的坐标  PXQ
+    
+    
+    
+    printf("给二维数组 %d X %d 赋值，请输入：\n",n,m);
+    for (i=0; i<n; i++) {
+        for (j=0; j<m; j++) {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    
+    printf("你输入的二维数组 %d X %d 为：\n",n,m);
+    for (i=0; i<n; i++) {
+        for (j=0; j<m; j++) {
+            printf("%d\t",a[i][j]);
+        }
+        printf("\n");
+    }
+
+
+
+
+
+
+}
+
+
+
+void test4(){   //定义一个4行5列的矩阵，从键盘上给各个元素赋值，求四周元素的和。
+    
+    int a[100][100]={0};
+    int n=4;      //行
+    int m=5;      //列
+    int i,j,sum=0;
+
+    
+    
+    
+    printf("给二维数组 %d X %d 赋值，请输入：\n",n,m);
+    for (i=0; i<n; i++) {
+        for (j=0; j<m; j++) {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    
+    printf("你输入的二维数组 %d X %d 为：\n",n,m);
+    for (i=0; i<n; i++) {
+        for (j=0; j<m; j++) {
+            printf("%d\t",a[i][j]);
+        }
+        printf("\n");
+    }
+
+    for (i=0; i<n; i++) {
+        for (j=0; j<m; j++) {
+            if((i==0)||(j==0)||(i==(n-1))||(j==(m-1)))
+                sum=sum+a[i][j];
+        }
+        
+    }
+    
+    
+    
+    printf("四周元素的和为:%d\n",sum);
+
+
+
+}
+
+
+
+
+void PascalTriangle(){  //编写程序打印出以下的杨辉三角形(要求打印出10行),使它能得出正确的结果。
+    
+    
+    int i,j,n=0,a[17]={0,1},l,r;
+    
+    while(n<1 || n>16)
+        
+    { printf("请输入杨辉三角形的行数:");
+        
+        scanf("%d",&n);
+        
+    }
+    
+    for(i=1;i<=n;i++)
+        
+    { l=0;
+        
+        for(j=1;j<=i;j++)
+            
+        { r=a[j];
+            
+            a[j]=l+r; /*每个数是上面两数之和*/
+            
+            l=r;
+            
+            printf("%5d",a[j]); /*输出杨辉三角*/
+            
+        }
+        
+        printf("\n");
+        
+    }
+}
+
+
+
+    
+    
+    
+    
+    
+    
+//    void PascalTriangleII(){ //编写程序打印出以下的杨辉三角形(要求打印出10行),使它能得出正确的结果。
+//        
+//        int i,j,n=0,a[17][17]={0};
+//        
+//        while(n<1 || n>16)
+//            
+//        { printf("请输入杨辉三角形的行数:");
+//            
+//            scanf("%d",&n);
+//            
+//        }
+//        
+//        for(i=0;i<n;i++)
+//            
+//            a[i][0]=1; /*第一列全置为一*/
+//        
+//        for(i=1;i<n;i++)
+//            
+//            for(j=1;j<=i;j++)
+//                
+//                a[i][j]=a[i-1][j-1]+a[i-1][j];/*每个数是上面两数之和*/
+//        
+//        for(i=0;i<n;i++) /*输出杨辉三角*/
+//            
+//        { for(j=0;j<=i;j++)
+//            
+//            printf("%5d",a[i][j]);
+//            
+//            printf("\n");
+//            
+//        }
+//        
+
+        
+        
+        
+//    }
+
+    
+    
+//    void test5() {   // 给出以下形式数据，计算各行元素的最小值，并存入一个一维数组中。
+//        
+//        
+//        
+//        
+//        return;
+//    
+//    
+
+    
+    
+    
+void test5(){    // 给出以下形式数据，计算各行元素的最小值，并存入一个一维数组中。
+    
+    int a[100][100]={0};
+    int n=3;      //行
+    int m=3;      //列
+    int i,j,min;
+    
+    
+    
+    
+    printf("给二维数组 %d X %d 赋值，请输入：\n",n,m);
+    for (i=0; i<n; i++) {
+        for (j=0; j<m; j++) {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    
+    printf("你输入的二维数组 %d X %d 为：\n",n,m);
+    for (i=0; i<n; i++) {
+        for (j=0; j<m; j++) {
+            printf("%d\t",a[i][j]);
+        }
+        printf("\n");
+    }
+
+
+  
+
+
+
+
+}
+    
+    
+
+
+
+
+
+
+
+
+
