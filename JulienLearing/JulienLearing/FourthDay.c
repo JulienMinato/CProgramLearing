@@ -14,6 +14,8 @@ void printfArray(int*a,int n) ;
 
 void scanfArray(int*a,int n);
 void palindromeNum(); //判定用户输入的正整数是否为“回文数”，所谓“回文数”是指正读反读都相同的数。
+void insertArray();    //  已有一个已排好序的数组，今输入一个数，要求按原来排序的规律将它插入数组中。
+void test1();   //定义一个4×3的二维数组a，数组元素的值由键盘输入，输出其中的最大值及所在的行下标。
 
 
 
@@ -30,7 +32,8 @@ int main(int argc, const char * argv[]) {
 //    palindromeNum();
     
 
-
+    test1();
+    
 
 }
 
@@ -115,6 +118,36 @@ void palindromeNum(){
 void insertArray(){
 //  已有一个已排好序的数组，今输入一个数，要求按原来排序的规律将它插入数组中。
 
+    int a[100]={0}; //因为你要继续加入数据，所以数组不能定义成9，要大一些，至少应该是10
+    int i;
+    for(i=0;i<9;i++ ) //输入9个数，必须用循环，一句解决不了
+        scanf("%d",&a[i]);
+    
+    int j,temp;
+    for(i=0;i<8;i++) //完成排序
+    {
+        for(j=i+1;j<9;j++)
+            if(a[i]>a[j])
+            {
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+    }
+    printf("input a number: " );
+    scanf("%d", &temp );
+    for(i=0;i<9;i++ ) //查找插入位置
+    {
+        if ( temp < a[i] )
+            break;
+    }
+    for( j=8;j>=i;j-- ) //i后面的数后移
+        a[j+1]=a[j] ;
+    a[i]=temp; //插入数据到i位
+    
+    for( i=0;i<10;i++ ) //输出数组
+        printf("%d ",a[i]);
+    printf("\n");
 
 
 
@@ -124,16 +157,46 @@ void insertArray(){
 
 
 
+void test1(){    //定义一个4×3的二维数组a，数组元素的值由键盘输入，输出其中的最大值及所在的行下标。
 
 
+    int a[100][100]={0};
+    int n=4;      //行
+    int m=3;      //列
+    int i,j,max;
+    int p,q;      //最大值所在的坐标  PXQ
+    
+    
+ 
+    printf("给二维数组 %d X %d 赋值，请输入：\n",n,m);
+    for (i=0; i<n; i++) {
+        for (j=0; j<m; j++) {
+            scanf("%d",&a[i][j]);
+        }
+    }
 
-
-
-
-
-
-
-
-
-
-
+    printf("你输入的二维数组 %d X %d 为：\n",n,m);
+    for (i=0; i<n; i++) {
+        for (j=0; j<m; j++) {
+            printf("%d\t",a[i][j]);
+        }
+        printf("\n");
+    }
+    
+    
+    max=a[0][0];
+    
+    for (i=0; i<n; i++) {
+        for (j=0; j<m; j++) {
+            if (a[i][j]>a[i][j+1]) {
+                max=a[i][j];
+            }
+            p=n;
+            q=m;
+        }
+    
+    
+    }
+    printf("二维数组中最大值的是：a[%d][%d]=%d\n",p,q,max);
+    
+}
