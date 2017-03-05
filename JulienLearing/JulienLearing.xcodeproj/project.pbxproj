@@ -16,6 +16,16 @@
 		F9865D891E67B834002C7266 /* Shopping.c in Sources */ = {isa = PBXBuildFile; fileRef = F9865D881E67B834002C7266 /* Shopping.c */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F94ADC401E6C31F50075326B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F94ADC3C1E6C31F40075326B /* C++Learning.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F94ADC321E6C31F40075326B;
+			remoteInfo = "C++Learning";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		F9865D7A1E67B7D2002C7266 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -29,6 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F94ADC3C1E6C31F40075326B /* C++Learning.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "C++Learning.xcodeproj"; path = "C++Learning/C++Learning.xcodeproj"; sourceTree = "<group>"; };
 		F9819CDC1E6C27EF0076748F /* ThirdDay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ThirdDay.c; sourceTree = "<group>"; };
 		F9819CDE1E6C28F60076748F /* SecondDay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SecondDay.c; sourceTree = "<group>"; };
 		F9819CE01E6C291A0076748F /* FirstDay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FirstDay.c; sourceTree = "<group>"; };
@@ -50,9 +61,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F94ADC3D1E6C31F40075326B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F94ADC411E6C31F50075326B /* C++Learning */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F9865D731E67B7D2002C7266 = {
 			isa = PBXGroup;
 			children = (
+				F94ADC3C1E6C31F40075326B /* C++Learning.xcodeproj */,
 				F9865D7E1E67B7D2002C7266 /* JulienLearing */,
 				F9865D7D1E67B7D2002C7266 /* Products */,
 			);
@@ -125,12 +145,28 @@
 			mainGroup = F9865D731E67B7D2002C7266;
 			productRefGroup = F9865D7D1E67B7D2002C7266 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F94ADC3D1E6C31F40075326B /* Products */;
+					ProjectRef = F94ADC3C1E6C31F40075326B /* C++Learning.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F9865D7B1E67B7D2002C7266 /* JulienLearing */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F94ADC411E6C31F50075326B /* C++Learning */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "C++Learning";
+			remoteRef = F94ADC401E6C31F50075326B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F9865D781E67B7D2002C7266 /* Sources */ = {
