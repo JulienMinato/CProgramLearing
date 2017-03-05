@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F9819CDD1E6C27EF0076748F /* ThirdDay.c in Sources */ = {isa = PBXBuildFile; fileRef = F9819CDC1E6C27EF0076748F /* ThirdDay.c */; };
+		F9819CDF1E6C28F60076748F /* SecondDay.c in Sources */ = {isa = PBXBuildFile; fileRef = F9819CDE1E6C28F60076748F /* SecondDay.c */; };
+		F9819CE11E6C291A0076748F /* FirstDay.c in Sources */ = {isa = PBXBuildFile; fileRef = F9819CE01E6C291A0076748F /* FirstDay.c */; };
+		F9819CE31E6C2C490076748F /* FifthDay.c in Sources */ = {isa = PBXBuildFile; fileRef = F9819CE21E6C2C490076748F /* FifthDay.c */; };
 		F9865D801E67B7D2002C7266 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F9865D7F1E67B7D2002C7266 /* main.c */; };
 		F9865D871E67B7F6002C7266 /* FourthDay.c in Sources */ = {isa = PBXBuildFile; fileRef = F9865D861E67B7F6002C7266 /* FourthDay.c */; };
 		F9865D891E67B834002C7266 /* Shopping.c in Sources */ = {isa = PBXBuildFile; fileRef = F9865D881E67B834002C7266 /* Shopping.c */; };
@@ -25,6 +29,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F9819CDC1E6C27EF0076748F /* ThirdDay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ThirdDay.c; sourceTree = "<group>"; };
+		F9819CDE1E6C28F60076748F /* SecondDay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SecondDay.c; sourceTree = "<group>"; };
+		F9819CE01E6C291A0076748F /* FirstDay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FirstDay.c; sourceTree = "<group>"; };
+		F9819CE21E6C2C490076748F /* FifthDay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FifthDay.c; sourceTree = "<group>"; };
 		F9865D7C1E67B7D2002C7266 /* JulienLearing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JulienLearing; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9865D7F1E67B7D2002C7266 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F9865D861E67B7F6002C7266 /* FourthDay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FourthDay.c; sourceTree = "<group>"; };
@@ -62,8 +70,12 @@
 			isa = PBXGroup;
 			children = (
 				F9865D7F1E67B7D2002C7266 /* main.c */,
+				F9819CDC1E6C27EF0076748F /* ThirdDay.c */,
 				F9865D861E67B7F6002C7266 /* FourthDay.c */,
 				F9865D881E67B834002C7266 /* Shopping.c */,
+				F9819CDE1E6C28F60076748F /* SecondDay.c */,
+				F9819CE01E6C291A0076748F /* FirstDay.c */,
+				F9819CE21E6C2C490076748F /* FifthDay.c */,
 			);
 			path = JulienLearing;
 			sourceTree = "<group>";
@@ -125,9 +137,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9819CDD1E6C27EF0076748F /* ThirdDay.c in Sources */,
 				F9865D891E67B834002C7266 /* Shopping.c in Sources */,
 				F9865D871E67B7F6002C7266 /* FourthDay.c in Sources */,
+				F9819CDF1E6C28F60076748F /* SecondDay.c in Sources */,
 				F9865D801E67B7D2002C7266 /* main.c in Sources */,
+				F9819CE11E6C291A0076748F /* FirstDay.c in Sources */,
+				F9819CE31E6C2C490076748F /* FifthDay.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +270,7 @@
 				F9865D851E67B7D2002C7266 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
